@@ -21,7 +21,7 @@ pipeline {
                     rmdir /S /Q "C:/Program Files/Apache Software Foundation/Tomcat 10.1/webapps/reactsportsdb"
                 )
                 mkdir "C:/Program Files/Apache Software Foundation/Tomcat 10.1/webapps/reactsportsdb"
-                xcopy /E /I /Y sportsfrontend/dist/* "C:/Program Files/Apache Software Foundation/Tomcat 10.1/webapps/reactsportsdb"
+                xcopy /E /I /Y "sportsfrontend/dist/*" "C:/Program Files/Apache Software Foundation/Tomcat 10.1/webapps/reactsportsdb"
                 """
             }
         }
