@@ -17,11 +17,11 @@ pipeline {
         stage('Deploy Frontend to Tomcat') {
             steps {
                 bat """
-                if exist "C:\Program Files\Apache Software Foundation\Tomcat 10.1\webapps\reactsportsdb" (
-                    rmdir /S /Q "C:\Program Files\Apache Software Foundation\Tomcat 10.1\webapps\reactsportsdb"
+                if exist "C:/Program Files/Apache Software Foundation/Tomcat 10.1/webapps/reactsportsdb" (
+                    rmdir /S /Q "C:/Program Files/Apache Software Foundation/Tomcat 10.1/webapps/reactsportsdb"
                 )
-                mkdir "C:\Program Files\Apache Software Foundation\Tomcat 10.1\webapps\reactsportsdb"
-                xcopy /E /I /Y sportsfrontend\dist\* "C:\Program Files\Apache Software Foundation\Tomcat 10.1\webapps\reactsportsdb"
+                mkdir "C:/Program Files/Apache Software Foundation/Tomcat 10.1/webapps/reactsportsdb"
+                xcopy /E /I /Y sportsfrontend/dist/* "C:/Program Files/Apache Software Foundation/Tomcat 10.1/webapps/reactsportsdb"
                 """
             }
         }
@@ -40,13 +40,13 @@ pipeline {
         stage('Deploy Backend to Tomcat') {
             steps {
                 bat """
-                if exist "C:\Program Files\Apache Software Foundation\Tomcat 10.1\webapps\sportsbackend.war" (
-                    del /Q "C:\Program Files\Apache Software Foundation\Tomcat 10.1\webapps\sportsbackend.war"
+                if exist "C:/Program Files/Apache Software Foundation/Tomcat 10.1/webapps/sportsbackend.war" (
+                    del /Q "C:/Program Files/Apache Software Foundation/Tomcat 10.1/webapps/sportsbackend.war"
                 )
-                if exist "C:\Program Files\Apache Software Foundation\Tomcat 10.1\webapps\sportsbackend" (
-                    rmdir /S /Q "C:\Program Files\Apache Software Foundation\Tomcat 10.1\webapps\sportsbackend"
+                if exist "C:/Program Files/Apache Software Foundation/Tomcat 10.1/webapps/sportsbackend" (
+                    rmdir /S /Q "C:/Program Files/Apache Software Foundation/Tomcat 10.1/webapps/sportsbackend"
                 )
-                copy "sportsbackend\target\*.war" "C:\Program Files\Apache Software Foundation\Tomcat 10.1\webapps\"
+                copy "sportsbackend/target/*.war" "C:/Program Files/Apache Software Foundation/Tomcat 10.1/webapps/"
                 """
             }
         }
