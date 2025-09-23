@@ -1,0 +1,7 @@
+com\klef\dev\service\PlayerService.class
+com\klef\dev\service\PlayerServiceImpl.class
+com\klef\dev\ServletInitializer.class
+com\klef\dev\repository\PlayerRepository.class
+com\klef\dev\entity\Player.class
+com\klef\dev\SportsbackendApplication.class
+com\klef\dev\controller\SportsController.class
