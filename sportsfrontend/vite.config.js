@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: "reactsportsdb", // updated from reactf1racedb
+  base: "/reactsportsdb/", // updated from reactf1racedb
 })
